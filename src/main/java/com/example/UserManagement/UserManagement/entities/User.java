@@ -6,7 +6,6 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,7 +15,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class User extends UserBasic {
+public class User extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +24,7 @@ public class User extends UserBasic {
     private String username;
     @Column(nullable = false)
     private String password;
-    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY)
+    @OneToMany
     private List<Role> roles;
     @OneToMany
     private List<UserType> userTypeList;

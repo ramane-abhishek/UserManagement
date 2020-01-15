@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 @Getter
@@ -20,8 +19,5 @@ public class Privilege extends BaseEntity {
 
     @Column
     private String privilege;
-
-    @ManyToOne
-    private Role role;
 
 }

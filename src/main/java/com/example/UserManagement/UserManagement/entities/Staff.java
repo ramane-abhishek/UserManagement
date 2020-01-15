@@ -13,7 +13,7 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Staff extends UserBasic {
+public class Staff extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
